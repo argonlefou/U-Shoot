@@ -1,0 +1,17 @@
+Copy the following files from the original game :
+
+ Assembly-CSharp.dll  
+ BepInEx.Core.dll  
+ BepInEx.Unity.IL2CPP.dll  
+ Il2CppInterop.Runtime.dll  
+ Il2Cppmscorlib.dll  
+ SBK.ArcadePlayer.dll  
+ SBK.BaseService.dll  
+ SBK.Core.dll  
+ SBK.CreditManagement.dll  
+ SBK.DynamicStateMachine.dll  
+ SBK.Matrix.dll  
+ UnityEngine.CoreModule.dll  
+ UnityEngine.InputLegacyModule.dll  
+ UnityEngine.dll  
+

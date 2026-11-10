@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E449E30F-D61F-428B-BEC1-D716E716EB6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BepInEx_UShoot_Plugin</RootNamespace>
+    <AssemblyName>UShoot_Plugin</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>UnityLibs\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>UnityLibs\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>UnityLibs\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>UnityLibs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>UnityLibs\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\VirtualGameController.cs" />
+    <Compile Include="Core\VirtualPlayerController.cs" />
+    <Compile Include="INIFile.cs" />
+    <Compile Include="Patch\_Unity.cs" />
+    <Compile Include="UShoot_Plugin.cs" />
+    <Compile Include="Patch\mconfig_gun.cs" />
+    <Compile Include="Patch\mdog_check_new.cs" />
+    <Compile Include="Patch\mGame Device_data_gun_core.cs" />
+    <Compile Include="Patch\mgame_device_sub_gun.cs" />
+    <Compile Include="Patch\mgame_mark_3d_obj.cs" />
+    <Compile Include="Patch\mgame_player_is_hit.cs" />
+    <Compile Include="Patch\mgun_body.cs" />
+    <Compile Include="Patch\mgun_body_tx_wuti.cs" />
+    <Compile Include="Patch\minput_manage.cs" />
+    <Compile Include="Patch\minput_obj_change_bullet.cs" />
+    <Compile Include="Patch\mnew_game_gui_connect_player_slider.cs" />
+    <Compile Include="Patch\mshow_info_manage_for_objs.cs" />
+    <Compile Include="Patch\mtest_screen.cs" />
+    <Compile Include="Patch\mzhichi_hanshu_pos.cs" />
+    <Compile Include="Patch\mzzp_houtai_manage_check_control.cs" />
+    <Compile Include="Core\PluginController.cs" />
+    <Compile Include="Core\PluginControllerButton.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\TcpData.cs" />
+    <Compile Include="TcpInputData.cs" />
+    <Compile Include="TcpOutputData.cs" />
+    <Compile Include="Core\TcpPacket.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

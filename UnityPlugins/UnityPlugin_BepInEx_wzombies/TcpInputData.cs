@@ -1,0 +1,25 @@
+using UnityPlugin_BepInEx.Core;
+
+namespace BepInEx_UShoot_Plugin
+{
+    public class TcpInputData : TcpData
+    {
+		//Game Inputs
+		public float[] Axis_X = null;
+		public float[] Axis_Y = null;
+        public byte[] Coin = null;
+        public byte[] Start = null;
+        public byte Exit;
+        public byte Test;
+        public byte MenuUp;
+        public byte MenuDown;
+        public byte MenuSelect;
+
+        //Generic Inputs
+        public byte HideCrosshairs = 0;
+		public byte EnableInputsHack = 0;
+
+        public TcpInputData(int PlayerNumer) : base(PlayerNumer) { }
+    }
+}
+

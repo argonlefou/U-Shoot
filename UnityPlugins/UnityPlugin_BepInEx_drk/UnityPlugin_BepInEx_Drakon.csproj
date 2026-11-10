@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E449E30F-D61F-428B-BEC1-D716E716EB6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BepInEx_UShoot_Plugin</RootNamespace>
+    <AssemblyName>UShoot_Plugin</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.10.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>UnityLibs\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>UnityLibs\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Core">
+      <HintPath>UnityLibs\BepInEx.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP">
+      <HintPath>UnityLibs\BepInEx.Unity.IL2CPP.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>UnityLibs\Il2CppInterop.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>UnityLibs\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="SBK.ArcadePlayer">
+      <HintPath>UnityLibs\SBK.ArcadePlayer.dll</HintPath>
+    </Reference>
+    <Reference Include="SBK.BaseService">
+      <HintPath>UnityLibs\SBK.BaseService.dll</HintPath>
+    </Reference>
+    <Reference Include="SBK.Core">
+      <HintPath>UnityLibs\SBK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SBK.CreditManagement">
+      <HintPath>UnityLibs\SBK.CreditManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="SBK.DynamicStateMachine">
+      <HintPath>UnityLibs\SBK.DynamicStateMachine.dll</HintPath>
+    </Reference>
+    <Reference Include="SBK.Matrix">
+      <HintPath>UnityLibs\SBK.Matrix.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>UnityLibs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>UnityLibs\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>UnityLibs\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\VirtualGameController.cs" />
+    <Compile Include="Core\VirtualPlayerController.cs" />
+    <Compile Include="INIFile.cs" />
+    <Compile Include="UShoot_Plugin.cs" />
+    <Compile Include="Patch\mChooseLevelWindow.cs" />
+    <Compile Include="Patch\mContinueWindow.cs" />
+    <Compile Include="Patch\mHudWindow.cs" />
+    <Compile Include="Patch\mInactivePlayerState.cs" />
+    <Compile Include="Patch\mInputsManager.cs" />
+    <Compile Include="Patch\mLaser2D.cs" />
+    <Compile Include="Patch\mPlayerWindow.cs" />
+    <Compile Include="Patch\mTarget.cs" />
+    <Compile Include="Patch\mTitleWindow.cs" />
+    <Compile Include="Patch\SBK\mApplicationManager.cs" />
+    <Compile Include="Patch\SBK\Matrix\mMatrixManager.cs" />
+    <Compile Include="Patch\SBK\PneumaticSeatsystem\mPneumaticSeatManager.cs" />
+    <Compile Include="Patch\SBK\RS232\mRS232DLL.cs" />
+    <Compile Include="Patch\SBK\Skyride_Turret\mTurret.cs" />
+    <Compile Include="Patch\SBK\TurretSystem\mTurretManager.cs" />
+    <Compile Include="Patch\_Unity.cs" />
+    <Compile Include="Core\PluginController.cs" />
+    <Compile Include="Core\PluginControllerButton.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\TcpData.cs" />
+    <Compile Include="TcpInputData.cs" />
+    <Compile Include="TcpOutputData.cs" />
+    <Compile Include="Core\TcpPacket.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

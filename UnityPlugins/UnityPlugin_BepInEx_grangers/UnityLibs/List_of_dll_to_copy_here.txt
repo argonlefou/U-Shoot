@@ -1,0 +1,9 @@
+Copy the following files from the original game :
+
+ Assembly-CSharp.dll  
+ UnityEngine.AudioModule.dll  
+ UnityEngine.CoreModule.dll  
+ UnityEngine.InputLegacyModule.dll  
+ UnityEngine.dll  
+ dog_net_windows.dll  
+

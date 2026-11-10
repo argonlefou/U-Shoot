@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProgramConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Global_Inputs>
+    <Input xsi:type="InputButton">
+      <Name>SERVICE</Name>
+      <Keys />
+    </Input>
+    <Input xsi:type="InputButton">
+      <Name>TEST</Name>
+      <Keys />
+    </Input>
+    <Input xsi:type="InputButton">
+      <Name>COIN</Name>
+      <Keys />
+    </Input>
+    <Input xsi:type="InputButton">
+      <Name>COIN MECH. 2</Name>
+      <Keys />
+    </Input>	
+	<Input xsi:type="InputButton">
+	  <Name>MENU_UP</Name>
+	  <Keys />
+	</Input>
+	<Input xsi:type="InputButton">
+	  <Name>MENU_DOWN</Name>
+	  <Keys />
+	</Input>
+	<Input xsi:type="InputButton">
+	  <Name>MENU_LEFT</Name>
+	  <Keys />
+	</Input>
+	<Input xsi:type="InputButton">
+	  <Name>MENU_RIGHT</Name>
+	  <Keys />
+	</Input>
+	<Input xsi:type="InputButton">
+	  <Name>MENU_SELECT</Name>
+	  <Keys />
+	</Input>	
+    <Input xsi:type="InputButton">
+      <Name>EXIT</Name>
+      <Keys />
+    </Input>
+  </Global_Inputs>
+  <Players_Inputs>
+    <Player>
+      <Id>1</Id>
+      <Inputs>
+	    <Input xsi:type="InputButton">
+		  <Name>COIN</Name>
+		  <Keys />
+		</Input>
+        <Input xsi:type="InputButton">
+          <Name>START</Name>
+          <Keys />
+        </Input>
+		<Input xsi:type="InputAxes">
+          <Name>AXES</Name>
+          <Keys />
+        </Input>
+        <Input xsi:type="InputButton">
+          <Name>TRIGGER</Name>
+          <Keys />
+        </Input>
+        <Input xsi:type="InputButton">
+          <Name>RELOAD</Name>
+          <Keys />
+        </Input>        
+      </Inputs>
+    </Player>
+    <Player>
+      <Id>2</Id>
+      <Inputs>
+	    <Input xsi:type="InputButton">
+		  <Name>COIN</Name>
+		  <Keys />
+		</Input>
+        <Input xsi:type="InputButton">
+          <Name>START</Name>
+          <Keys />
+        </Input>
+		<Input xsi:type="InputAxes">
+          <Name>AXES</Name>
+          <Keys />
+        </Input>
+        <Input xsi:type="InputButton">
+          <Name>TRIGGER</Name>
+          <Keys />
+        </Input>
+        <Input xsi:type="InputButton">
+          <Name>RELOAD</Name>
+          <Keys />
+        </Input>     
+      </Inputs>
+    </Player>
+    <Player>
+      <Id>3</Id>
+      <Inputs>
+	    <Input xsi:type="InputButton">
+		  <Name>COIN</Name>
+		  <Keys />
+		</Input>
+        <Input xsi:type="InputButton">
+          <Name>START</Name>
+          <Keys />
+        </Input>
+		<Input xsi:type="InputAxes">
+          <Name>AXES</Name>
+          <Keys />
+        </Input>
+        <Input xsi:type="InputButton">
+          <Name>TRIGGER</Name>
+          <Keys />
+        </Input>
+        <Input xsi:type="InputButton">
+          <Name>RELOAD</Name>
+          <Keys />
+        </Input>     
+      </Inputs>
+    </Player>
+    <Player>
+      <Id>4</Id>
+      <Inputs>
+	    <Input xsi:type="InputButton">
+		  <Name>COIN</Name>
+		  <Keys />
+		</Input>
+        <Input xsi:type="InputButton">
+          <Name>START</Name>
+          <Keys />
+        </Input>
+		<Input xsi:type="InputAxes">
+          <Name>AXES</Name>
+          <Keys />
+        </Input>
+        <Input xsi:type="InputButton">
+          <Name>TRIGGER</Name>
+          <Keys />
+        </Input>
+        <Input xsi:type="InputButton">
+          <Name>RELOAD</Name>
+          <Keys />
+        </Input>     
+      </Inputs>
+    </Player>
+  </Players_Inputs>
+  <Options>
+    <Option>
+      <Name>FlycastPath</Name>
+      <Type>Text</Type>
+      <Value></Value>
+    </Option>
+    <Option>
+      <Name>LinuxLoaderPath</Name>
+      <Type>Text</Type>
+      <Value></Value>
+    </Option>
+    <Option>
+      <Name>Pcsx2x6EmulatorPath</Name>
+      <Type>Text</Type>
+      <Value></Value>
+    </Option>
+	<Option>
+      <Name>Rpcs3EmulatorPath</Name>
+      <Type>Text</Type>
+      <Value></Value>
+    </Option>
+    <Option>
+      <Name>EnableOutputs</Name>
+      <Type>Bool</Type>
+      <Value>True</Value>
+    </Option>
+    <Option>
+      <Name>WindowsOutputs</Name>
+      <Type>Bool</Type>
+      <Value>True</Value>
+    </Option>
+    <Option>
+      <Name>NetworkOutputs</Name>
+      <Type>Bool</Type>
+      <Value>False</Value>
+    </Option>
+    <Option>
+      <Name>OutputPollingDelay</Name>
+      <Type>Numeric</Type>
+      <Value>1</Value>
+    </Option>
+    <Option>
+      <Name>OutputCustomDamagedDelay</Name>
+      <Type>Numeric</Type>
+      <Value>200</Value>
+    </Option>
+    <Option>
+      <Name>OutputRecoilOnDelay</Name>
+      <Type>Numeric</Type>
+      <Value>30</Value>
+    </Option>
+    <Option>
+      <Name>OutputRecoilOffDelay</Name>
+      <Type>Numeric</Type>
+      <Value>10</Value>
+    </Option>
+	<Option>
+      <Name>DetachDebugger</Name>
+      <Type>Bool</Type>
+      <Value>False</Value>
+    </Option>
+  </Options>
+</ProgramConfig>

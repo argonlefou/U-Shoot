@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26268305-8816-491A-ADDF-BEF59E619277}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>U_Shoot</RootNamespace>
+    <AssemblyName>U-Shoot</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>U-Blue.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Games\BaseGame.cs" />
+    <Compile Include="Games\BaseGame32.cs" />
+    <Compile Include="Games\BaseGame64.cs" />
+    <Compile Include="Games\BaseGameUnity64.cs" />
+    <Compile Include="Games\BaseGameUnity32.cs" />
+    <Compile Include="Games\Game_AllsHodsd.cs" />
+    <Compile Include="Games\Game_AllsHodsd_Old.cs" />
+    <Compile Include="Games\Game_ArcadepcBullseye.cs" />
+    <Compile Include="Games\Game_ArcadepcElevatorActionInvasion.cs" />
+    <Compile Include="Games\Game_ArcadepcFireHero.cs" />
+    <Compile Include="Games\Game_ArcadepcFireHero2023.cs" />
+    <Compile Include="Games\Game_ArcadepcGalaxyRangers.cs" />
+    <Compile Include="Games\Game_ArcadepcHsfr.cs" />
+    <Compile Include="Games\Game_ArcadepcMarsSortie.cs" />
+    <Compile Include="Games\Game_ArcadepcMIB.cs" />
+    <Compile Include="Games\Game_ArcadepcOnePoint.cs" />
+    <Compile Include="Games\Game_ArcadepcRaccoonRampage.cs" />
+    <Compile Include="Games\Game_ArcadepcRabbidsHollywood.cs" />
+    <Compile Include="Games\Game_ArcadepcRobinHood.cs" />
+    <Compile Include="Games\Game_ArcadepcSkullOfShadow.cs" />
+    <Compile Include="Games\Game_ArcadepcTopGun.cs" />
+    <Compile Include="Games\Game_ArcadepcTopGun2.cs" />
+    <Compile Include="Games\Game_ArcadepcWaterSprite2.cs" />
+    <Compile Include="Games\Game_ArcadepcWaterWar2.cs" />
+    <Compile Include="Games\Game_ArcadepcWisdomZombies.cs" />
+    <Compile Include="Games\Game_ArcadepcWws.cs" />
+    <Compile Include="Games\Game_ArcadepcTombRaider.cs" />
+    <Compile Include="Games\Game_Es4PointBlankX.cs" />
+    <Compile Include="Games\Game_Flycast.cs" />
+    <Compile Include="Games\Game_FlycastNaomi.cs" />
+    <Compile Include="Games\Game_FlycastNinjaslt.cs" />
+    <Compile Include="Games\Game_GameWaxAkuma.cs" />
+    <Compile Include="Games\Game_GvrAliens.cs" />
+    <Compile Include="Games\Game_KonamiLe3.cs" />
+    <Compile Include="Games\Game_KonamiWartran.cs" />
+    <Compile Include="Games\Game_Lindbergh2Spicy.cs" />
+    <Compile Include="Games\Game_LindberghGhostSquadEvo.cs" />
+    <Compile Include="Games\Game_LindberghHotdEx.cs" />
+    <Compile Include="Games\Game_LindberghLgj.cs" />
+    <Compile Include="Games\Game_LindberghLgjsp.cs" />
+    <Compile Include="Games\Game_LindberghHotd4.cs" />
+    <Compile Include="Games\Game_LindberghHotd4sp.cs" />
+    <Compile Include="Games\Game_LindberghRambo.cs" />
+    <Compile Include="Games\Game_ArcadepcMechaDino.cs" />
+    <Compile Include="Games\Game_ArcadepcMechaTornado.cs" />
+    <Compile Include="Games\Game_NuLuigiMansion.cs" />
+    <Compile Include="Games\Game_Pcsx2x6.cs" />
+    <Compile Include="Games\Game_Pcsx2x6Cobra.cs" />
+    <Compile Include="Games\Game_Pcsx2x6TimeCrisis3.cs" />
+    <Compile Include="Games\Game_Pcsx2x6TimeCrisis4.cs" />
+    <Compile Include="Games\Game_Pcsx2x6VampireNight.cs" />
+    <Compile Include="Games\Game_RtHalo.cs" />
+    <Compile Include="Games\Game_RtNerfArcade.cs" />
+    <Compile Include="Games\Game_RtWalkingDead.cs" />
+    <Compile Include="Games\Game_RwDreamRaiders.cs" />
+    <Compile Include="Games\Game_RwGoldenGun.cs" />
+    <Compile Include="Games\Game_RwLgi3d.cs" />
+    <Compile Include="Games\Game_RwOpGhost.cs" />
+    <Compile Include="Games\Game_RwOpGhostJvs.cs" />
+    <Compile Include="Games\Game_RwTargetBravo.cs" />
+    <Compile Include="Games\Game_RwTargetBravoJvs.cs" />
+    <Compile Include="Games\Game_RwTransformers.cs" />
+    <Compile Include="Games\Game_S357DarkEscape.cs" />
+    <Compile Include="Games\Game_S357DeadStormPiratesSpecial.cs" />
+    <Compile Include="Games\Game_S357SailorZombie.cs" />
+    <Compile Include="Games\Game_TtxEadp.cs" />
+    <Compile Include="Games\Game_TtxGaiaAttack4.cs" />
+    <Compile Include="Games\Game_TtxHauntedMuseum.cs" />
+    <Compile Include="Games\Game_KonamiCastlevania.cs" />
+    <Compile Include="Games\Game_KonamiGashaaaan.cs" />
+    <Compile Include="Games\Game_KonamiGashaaaan2.cs" />
+    <Compile Include="Games\Game_Re2Transformers2.cs" />
+    <Compile Include="Games\Game_RwGunman.cs" />
+    <Compile Include="Games\Game_TtxBlockKingBallShooter.cs" />
+    <Compile Include="Games\Game_TtxGundam.cs" />
+    <Compile Include="Games\Game_TtxHauntedMuseum2.cs" />
+    <Compile Include="Games\Game_TtxMusicGunGun2.cs" />
+    <Compile Include="Games\Game_TtxSilentHill.cs" />
+    <Compile Include="Games\Game_WndAlienSafari.cs" />
+    <Compile Include="Games\Game_WndArtIsDead.cs" />
+    <Compile Include="Games\Game_WndBigBuckHunterUltimate.cs" />
+    <Compile Include="Games\Game_WndBlueEstate.cs" />
+    <Compile Include="Games\Game_WndBonbon95.cs" />
+    <Compile Include="Games\Game_WndBugBusters.cs" />
+    <Compile Include="Games\Game_WndColtWildWestShootout.cs" />
+    <Compile Include="Games\Game_WndDcop.cs" />
+    <Compile Include="Games\Game_WndFriction.cs" />
+    <Compile Include="Games\Game_WndHeavyFire3Pc.cs" />
+    <Compile Include="Games\Game_WndHeavyFire4Pc.cs" />
+    <Compile Include="Games\Game_WndHod2pc.cs" />
+    <Compile Include="Games\Game_WndHod3pc.cs" />
+    <Compile Include="Games\Game_WndHotdoPc.cs" />
+    <Compile Include="Games\Game_WndMadBullets.cs" />
+    <Compile Include="Games\Game_WndOpWolfReturns.cs" />
+    <Compile Include="Games\Game_WndReload.cs" />
+    <Compile Include="Games\Game_WndZombieCrisis.cs" />
+    <Compile Include="Games\__Template.cs" />
+    <Compile Include="Games\Game_ArcadepcMissionImpossible.cs" />
+    <Compile Include="Games\Game_ArcadepcNightHunter2.cs" />
+    <Compile Include="Games\Game_ArcadepcDrakons.cs" />
+    <Compile Include="Games\Game_S357RazingStorm.cs" />
+    <Compile Include="Games\Game_ArcadepcDinoInvasion.cs" />
+    <Compile Include="GUI\Controls\Ctrl_Game.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_Game.Designer.cs">
+      <DependentUpon>Ctrl_Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_InputAxis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_InputAxis.Designer.cs">
+      <DependentUpon>Ctrl_InputAxis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_InputAxisItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_InputAxisItem.Designer.cs">
+      <DependentUpon>Ctrl_InputAxisItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_InputButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_InputButton.Designer.cs">
+      <DependentUpon>Ctrl_InputButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_InputButtonItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_InputButtonItem.Designer.cs">
+      <DependentUpon>Ctrl_InputButtonItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_Option.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_Option.Designer.cs">
+      <DependentUpon>Ctrl_Option.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_OptionBool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_OptionBool.Designer.cs">
+      <DependentUpon>Ctrl_OptionBool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_OptionBrowse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_OptionBrowse.Designer.cs">
+      <DependentUpon>Ctrl_OptionBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_OptionButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_OptionButton.Designer.cs">
+      <DependentUpon>Ctrl_OptionButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_OptionList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_OptionList.Designer.cs">
+      <DependentUpon>Ctrl_OptionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_OptionNumeric.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_OptionNumeric.Designer.cs">
+      <DependentUpon>Ctrl_OptionNumeric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_OptionText.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_OptionText.Designer.cs">
+      <DependentUpon>Ctrl_OptionText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_TargetPath.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\Ctrl_TargetPath.Designer.cs">
+      <DependentUpon>Ctrl_TargetPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Wnd_GameOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Wnd_GameOptions.Designer.cs">
+      <DependentUpon>Wnd_GameOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Wnd_AxisOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Wnd_AxisOptions.Designer.cs">
+      <DependentUpon>Wnd_AxisOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Wnd_InputListener.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Wnd_InputListener.Designer.cs">
+      <DependentUpon>Wnd_InputListener.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Wnd_Inputs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Wnd_Inputs.Designer.cs">
+      <DependentUpon>Wnd_Inputs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Wnd_Outputs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Wnd_Outputs.Designer.cs">
+      <DependentUpon>Wnd_Outputs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Wnd_DefaultPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Wnd_DefaultPath.Designer.cs">
+      <DependentUpon>Wnd_DefaultPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\BaseCopyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\BaseCopyWindow.Designer.cs">
+      <DependentUpon>BaseCopyWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\BaseTestMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\BaseTestMenu.Designer.cs">
+      <DependentUpon>BaseTestMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\BaseUnityConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\BaseUnityConfig.Designer.cs">
+      <DependentUpon>BaseUnityConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Castlevania\Patcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Castlevania\Patcher.Designer.cs">
+      <DependentUpon>Patcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\DE4D\Patcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\DE4D\Patcher.Designer.cs">
+      <DependentUpon>Patcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\CommonVertical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\CommonVertical.Designer.cs">
+      <DependentUpon>CommonVertical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\FireHero2023.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\FireHero2023.Designer.cs">
+      <DependentUpon>FireHero2023.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\GalaxyRangers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\GalaxyRangers.Designer.cs">
+      <DependentUpon>GalaxyRangers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\MechaTornado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\MechaTornado.Designer.cs">
+      <DependentUpon>MechaTornado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\NerfArcade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\NerfArcade.Designer.cs">
+      <DependentUpon>NerfArcade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\Rabbids.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\Rabbids.Designer.cs">
+      <DependentUpon>Rabbids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\SkullOfShadow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\SkullOfShadow.Designer.cs">
+      <DependentUpon>SkullOfShadow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\TombRaider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\TombRaider.Designer.cs">
+      <DependentUpon>TombRaider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\UnityPluginInstallers\CommonX64.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\UnityPluginInstallers\CommonX64.Designer.cs">
+      <DependentUpon>CommonX64.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\UnityPluginInstallers\CommonX86.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\UnityPluginInstallers\CommonX86.Designer.cs">
+      <DependentUpon>CommonX86.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\GoldenGun\TestMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\GoldenGun\TestMenu.Designer.cs">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Hod3pc\ArcadeModConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Hod3pc\ArcadeModConfig.Designer.cs">
+      <DependentUpon>ArcadeModConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\MIB\TestMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\MIB\TestMenu.Designer.cs">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\MissionImpossible\TestMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\MissionImpossible\TestMenu.Designer.cs">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\OperationGhost\ExtendedStage3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\OperationGhost\ExtendedStage3.Designer.cs">
+      <DependentUpon>ExtendedStage3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\OperationGhost\NoCrosshairMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\OperationGhost\NoCrosshairMod.Designer.cs">
+      <DependentUpon>NoCrosshairMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\OperationGhost\RedBloodMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\OperationGhost\RedBloodMod.Designer.cs">
+      <DependentUpon>RedBloodMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\SailorZombie\Patcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\SailorZombie\Patcher.Designer.cs">
+      <DependentUpon>Patcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\SilentHill\RedBloodMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\SilentHill\RedBloodMod.Designer.cs">
+      <DependentUpon>RedBloodMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\TargetBravo\NoCrosshairMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\TargetBravo\NoCrosshairMod.Designer.cs">
+      <DependentUpon>NoCrosshairMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\TransformersHA\TestMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\TransformersHA\TestMenu.Designer.cs">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\TransformersSR\TestMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\TransformersSR\TestMenu.Designer.cs">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\Common.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\UnityPluginConfigs\Common.Designer.cs">
+      <DependentUpon>Common.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\WalkingDead\CrimsonBlood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UShoot_Program.cs" />
+    <Compile Include="Win32.cs" />
+    <Compile Include="GUI\Wnd_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Wnd_Main.Designer.cs">
+      <DependentUpon>Wnd_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Controls\Ctrl_Game.resx">
+      <DependentUpon>Ctrl_Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Ctrl_InputAxis.resx">
+      <DependentUpon>Ctrl_InputAxis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Ctrl_InputAxisItem.resx">
+      <DependentUpon>Ctrl_InputAxisItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Ctrl_InputButton.resx">
+      <DependentUpon>Ctrl_InputButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Ctrl_InputButtonItem.resx">
+      <DependentUpon>Ctrl_InputButtonItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Ctrl_Option.resx">
+      <DependentUpon>Ctrl_Option.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Ctrl_OptionBool.resx">
+      <DependentUpon>Ctrl_OptionBool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Ctrl_OptionBrowse.resx">
+      <DependentUpon>Ctrl_OptionBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Ctrl_OptionButton.resx">
+      <DependentUpon>Ctrl_OptionButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Ctrl_OptionList.resx">
+      <DependentUpon>Ctrl_OptionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Ctrl_OptionNumeric.resx">
+      <DependentUpon>Ctrl_OptionNumeric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Ctrl_OptionText.resx">
+      <DependentUpon>Ctrl_OptionText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\Ctrl_TargetPath.resx">
+      <DependentUpon>Ctrl_TargetPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Wnd_GameOptions.resx">
+      <DependentUpon>Wnd_GameOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Wnd_AxisOptions.resx">
+      <DependentUpon>Wnd_AxisOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Wnd_InputListener.resx">
+      <DependentUpon>Wnd_InputListener.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Wnd_Inputs.resx">
+      <DependentUpon>Wnd_Inputs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Wnd_Main.resx">
+      <DependentUpon>Wnd_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Wnd_Outputs.resx">
+      <DependentUpon>Wnd_Outputs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Wnd_DefaultPath.resx">
+      <DependentUpon>Wnd_DefaultPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\BaseCopyWindow.resx">
+      <DependentUpon>BaseCopyWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\BaseTestMenu.resx">
+      <DependentUpon>BaseTestMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\BaseUnityConfig.resx">
+      <DependentUpon>BaseUnityConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Castlevania\Patcher.resx">
+      <DependentUpon>Patcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\DE4D\Patcher.resx">
+      <DependentUpon>Patcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\GoldenGun\TestMenu.resx">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Hod3pc\ArcadeModConfig.resx">
+      <DependentUpon>ArcadeModConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\MIB\TestMenu.resx">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\MissionImpossible\TestMenu.resx">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\SailorZombie\Patcher.resx">
+      <DependentUpon>Patcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\SilentHill\RedBloodMod.resx">
+      <DependentUpon>RedBloodMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\TransformersHA\TestMenu.resx">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\TransformersSR\TestMenu.resx">
+      <DependentUpon>TestMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\UnityPluginConfigs\Common.resx">
+      <DependentUpon>Common.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\UnityPluginConfigs\CommonVertical.resx">
+      <DependentUpon>CommonVertical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\UnityPluginConfigs\FireHero2023.resx">
+      <DependentUpon>FireHero2023.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\UnityPluginConfigs\GalaxyRangers.resx">
+      <DependentUpon>GalaxyRangers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\UnityPluginConfigs\MechaTornado.resx">
+      <DependentUpon>MechaTornado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\UnityPluginConfigs\NerfArcade.resx">
+      <DependentUpon>NerfArcade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\UnityPluginConfigs\Rabbids.resx">
+      <DependentUpon>Rabbids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\UnityPluginConfigs\SkullOfShadow.resx">
+      <DependentUpon>SkullOfShadow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\UnityPluginConfigs\TombRaider.resx">
+      <DependentUpon>TombRaider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UShoot_Program.resx">
+      <DependentUpon>UShoot_Program.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UsCore\UsCore.csproj">
+      <Project>{d4a9dd9c-425e-4eac-bdcb-c7f31f1d2d20}</Project>
+      <Name>UsCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hooked_Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\de4d\texture_sight_off" />
+    <None Include="Resources\de4d\texture_sight_on" />
+    <None Include="Resources\hod3pc_arcade\DefaultRanking.dat" />
+    <None Include="Resources\sailorz\texture_2D_off.ntp" />
+    <None Include="Resources\sailorz\texture_2D_on.ntp" />
+    <None Include="UnHooked_Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start_2_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start_1_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lights_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lights_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unity_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unity_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Outputs_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico\Options.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowDown_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowRight_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExpandPlus_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollapseMinus_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddGreen_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoveRed_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExpandPlusGrey_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game-controller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pistol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLose_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Joystick_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M2_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo\Tha_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo\Sgg_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chip_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chip_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unity_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_32px.png" />
+    <None Include="Resources\Logo\Hod3pc_Logo.png" />
+    <None Include="Resources\ico\config.ico" />
+    <None Include="Resources\config_16px.png" />
+    <None Include="Resources\folders_32px.png" />
+    <None Include="Resources\rgb.png" />
+    <None Include="Resources\rgb_24px.png" />
+    <None Include="Resources\folder_24px.png" />
+    <None Include="Resources\gamefolder_24px.png" />
+    <None Include="Resources\controls_24px.png" />
+    <None Include="Resources\check_16.png" />
+    <None Include="Resources\check_blue_16.png" />
+    <None Include="Resources\start_16px.png" />
+    <Content Include="U-Blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="Date" BeforeTargets="BeforeBuild">
+    <WriteLinesToFile File="$(IntermediateOutputPath)gen.cs" Lines="static partial class Builtin { public static long CompileTime = $([System.DateTime]::UtcNow.Ticks) %3B }" Overwrite="true" />
+    <ItemGroup>
+      <Compile Include="$(IntermediateOutputPath)gen.cs" />
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

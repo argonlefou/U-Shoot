@@ -1,0 +1,377 @@
+﻿
+namespace UsCore.MameOutput
+{
+    public enum OutputId : uint
+    {
+        P1_LmpStart = 1,
+        P2_LmpStart,
+        P3_LmpStart,
+        P4_LmpStart,
+        P1_LmpPanel,
+        P2_LmpPanel,
+        LmpPanel2,
+        Lmp2D3D,        //LGI 3D button 2D/3D
+        LmpRoom,        //Let's Go Jungle
+        LmpCoin,        //Let's Go Jungle
+        LmpPanel,        
+        LmpBillboard,
+        LmpBillboard_R,
+        LmpBillboard_G,
+        LmpBillboard_B,
+        LmpSpeaker,     //Time Crisis 5
+        LmpDinoHead,    //\
+        LmpLogo,        //
+        LmpDinoEyes,    //
+        LmpRoof,        //
+        LmpMarquee,     //
+        LmpDash,        //
+        LmpFoliage,     //--Jurassic Park (Rawh Trill)
+        LmpSeat_R,      //
+        LmpSeat_G,      //
+        LmpSeat_B,      //
+        LmpBenchLogo,   //
+        LmpSeatBase,    //
+        LmpEstop,       //
+        LmpCompressor,  ///
+        LmpRoof_R,          //\
+        LmpRoof_G,          //
+        LmpRoof_B,          //
+        LmpLgMarquee,       //
+        LmpSqMarquee,       //
+        LmpWalker_R,        //  Walking Dead (Raw Thrill)
+        LmpWalker_G,        //
+        LmpWalker_B,        //  
+        LmpWalkerEyes,      //
+        LmpWalkerCeiling,   ///
+        LmpPosts,
+        Lmp1,   //\
+        Lmp2,   //
+        Lmp3,   //
+        Lmp4,   // 2 Spicy, HOD EX
+        Lmp5,   //
+        Lmp6,   ///
+        LmpLeft,
+        LmpSide_R,  //\
+        LmpSide_G,  //  Elevator Action Death Parade
+        LmpSide_B,  ///
+        LmpRight,
+        LmpRear_R,
+        LmpRear_G,
+        LmpRear_B,
+        LmpLBtn,    //\
+        LmpMBtn,    //  Music Gun Gun 2 Buttons < o >
+        LmpRBtn,    ///
+        LmpUpBtn,       //\
+        LmpDownBtn,     //  Elevator Action Death Parade
+        LmpCloseBtn,    ///
+        LmpCannonBtn,   //\
+        LmpCannon_R,    //  Block King Ball Shooter
+        LmpCannon_G,    //
+        LmpCannon_B,    ///
+        P1_LmpGun_R,        //\
+        P1_LmpGun_G,        //
+        P1_LmpGun_B,        //
+        P2_LmpGun_R,        //
+        P2_LmpGun_G,        //
+        P2_LmpGun_B,        //  Luigi Mansion Arcade
+        P1_LmpWindow_R,     //
+        P1_LmpWindow_G,     //
+        P1_LmpWindow_B,     //
+        P2_LmpWindow_R,     //
+        P2_LmpWindow_G,     //
+        P2_LmpWindow_B,     ///
+        P1_LmpGun,
+        P2_LmpGun,
+        P3_LmpGun,
+        P4_LmpGun,
+        P1_LmpHolder,
+        P2_LmpHolder,
+        P3_LmpHolder,
+        P4_LmpHolder,
+        P1_LmpBreak,    //\
+        P2_LmpBreak,    /// Transformers
+        P1_Lmp_R,
+        P1_Lmp_G,
+        P1_Lmp_B,
+        P2_Lmp_R,
+        P2_Lmp_G,
+        P2_Lmp_B,
+        P1_LmpCard_R,
+        P1_LmpCard_G,
+        P2_LmpCard_R,
+        P2_LmpCard_G,
+        P1_LedAmmo1,    //\
+        P1_LedAmmo2,    //  Aliens Extermination, Ammo digits
+        P2_LedAmmo1,    //
+        P2_LedAmmo2,    ///
+        P1_LmpGunGrenadeBtn,    //\
+        P2_LmpGunGrenadeBtn,    //
+        P1_LmpGunMolding,       //
+        P2_LmpGunMolding,       //  Aliens Armageddon
+        LmpMarqueeBacklight,    //    
+        LmpMarqueeUplight,      //
+        LmpUpperCtrlPanel,      //
+        LmpLowerCtrlPanel,      ///
+
+        P1_GunRecoil,
+        P2_GunRecoil,
+        P3_GunRecoil,
+        P4_GunRecoil,
+        P1_GunMotor,
+        P2_GunMotor,
+        P3_GunMotor,
+        P4_GunMotor,        
+        P1_AirFront,
+        P2_AirFront,
+        P1_AirRear,
+        P2_AirRear,
+        Blower_Level,
+        P1_Fan,
+        P2_Fan,
+        VibrationSeat,
+        DoorB,
+        DoorA,
+        ElevatorLedsStatus,
+        LmpStop,
+        LmpAction,
+        LmpReset,
+        LmpSpot,
+        LmpFloor,
+        LmpError,
+        LmpSafety,
+        P1_LedKills1,
+        P1_LedKills2,
+        P2_LedKills1,
+        P2_LedKills2,
+        P1_Whip_R,
+        P1_Whip_G,
+        P1_Whip_B,
+        P2_Whip_R,
+        P2_Whip_G,
+        P2_Whip_B,
+        P1_LmpHead,
+        P2_LmpHead,
+        P1_LmpFoot,
+        P2_LmpFoot,
+        P1_LmpFront,  
+        P2_LmpFront,
+        P3_LmpFront,
+        P4_LmpFront,
+        LmpLever,
+        Lmp_Downlight,
+        Lmp_DirectHit,
+        Lmp_PoliceBar,
+        Lmp_GreenTestLight,
+        Lmp_RedLight,
+        Lmp_WhiteStrobe,
+        P1_LmpGunTip,
+        P1_LmpGunBack,
+        P2_LmpGunTip,
+        P2_LmpGunBack,
+        BallAgitator_State,
+        BallAgitator_Direction,
+        P1_BallShooter,
+        P2_BallShooter,
+        Lmp_Horn_R,
+        Lmp_Horn_G,
+        Lmp_Horn_B,
+        Lmp_LeftBulletMark,
+        Lmp_RightBulletMark,
+        Lmp_W,
+        Lmp_A,
+        Lmp_N,
+        Lmp_T,
+        Lmp_E,
+        Lmp_D,
+        Lmp_LeftReload,
+        Lmp_RightReload,
+        Lmp_Payout,
+        TicketDrive,
+        TicketMeter,
+        P1_LmpBonusWeapon,
+        P2_LmpBonusWeapon,
+        P3_LmpBonusWeapon,
+        P4_LmpBonusWeapon,
+        BonusWeaponLamp,
+        SeatVibrationLamp,
+        WaterFallLamp,
+        WaterLevelLamp,
+        P1_Lmp_SeatPuck,
+        P1_Lmp_SeatMarquee,
+        P1_Lmp_SeatSpeaker_R,
+        P1_Lmp_SeatSpeaker_O,
+        P1_Lmp_SeatSpeaker_B,
+        P2_Lmp_SeatPuck,
+        P2_Lmp_SeatMarquee,
+        P2_Lmp_SeatSpeaker_R,
+        P2_Lmp_SeatSpeaker_O,
+        P2_Lmp_SeatSpeaker_B,
+        Lmp_TMolding_R,
+        Lmp_TMolding_G,
+        Lmp_TMolding_B,
+        Lmp_SeatDownLight,  
+        P1_WaterFire,
+        P2_WaterFire,
+        P3_WaterFire,
+        P4_WaterFire,
+        WaterPump,
+        P1_BigGun,
+        P2_BigGun,
+        P3_BigGun,
+        P4_BigGun,
+        P1_TicketFeeder,
+        P2_TicketFeeder,
+        P3_TicketFeeder,
+        P4_TicketFeeder,
+        P1_ChairShake,
+        P2_ChairShake,
+        P3_ChairShake,
+        P4_ChairShake,
+        SmokeSwitch,
+        P1_Shaker,          //\
+        P2_Shaker,          //  Mech Tornado
+        P3_Shaker,          //
+        P4_Shaker,          ///
+        BonusDisplay,       //Robin Hood
+        CoinBlocker_1,        //\
+        CoinBlocker_2,
+        MotorUnit_1,        //  Gashaaaan 2
+        MotorUnit_2,        ///
+        P1_WaterRotate,     //\
+        P2_WaterRotate,     ///  Hero Fire arcade
+        P1_GunType,
+        P2_GunType,
+        Neuralizer,         //MIB
+        Lmp_Disinfection,
+        Lmp_P1_P2_OutOfTickets,
+        Lmp_P3_P4_OutOfTickets,
+        Lmp_Marquee_1,
+        Lmp_Marquee_2,
+        P1_InnerWater,
+        P2_InnerWater,
+        P3_InnerWater,
+        P4_InnerWater,
+        P1_OuterWater,
+        P2_OuterWater,
+        P3_OuterWater,
+        P4_OuterWater,
+        Lmp_Bakuon,         // \
+        Lmp_EMoneyCenter,   //
+        Lmp_EMoneyRight,    //
+        Lmp_EMoneyLeft,     //
+        Lmp_Eye0,           //
+        P1_LmpCeiling_R,    //
+        P1_LmpCeiling_G,    //
+        P1_LmpCeiling_B,    //  House of The Dead : Scarlet Dawn
+        P2_LmpCeiling_R,    //
+        P2_LmpCeiling_G,    //
+        P2_LmpCeiling_B,    //
+        Lmp_ZombieObject_R, //
+        Lmp_ZombieObject_G, //
+        Lmp_ZombieObject_B, // /
+        P1_BassShaker,
+        P2_BassShaker,        
+        P1_LightBelt,       // Zombie Crisis
+        P2_LightBelt,       //
+
+        Lmp_PodLeft_Panel,              //<-- Halo
+        Lmp_PodLeft_Panel_R,
+        Lmp_PodLeft_Panel_G,
+        Lmp_PodLeft_Panel_B,
+        Lmp_PodLeft_Panel_Front,
+        Lmp_PodLeft_Panel_Under,
+        Lmp_PodLeft_GunChase_R,
+        Lmp_PodLeft_GunChase_G,
+        Lmp_PodLeft_GunChase_B,
+        Lmp_PodRight_Panel,
+        Lmp_PodRight_Panel_R,
+        Lmp_PodRight_Panel_G,
+        Lmp_PodRight_Panel_B,
+        Lmp_PodRight_Panel_Front,
+        Lmp_PodRight_Panel_Under,
+        Lmp_PodRight_GunChase_R,
+        Lmp_PodRight_GunChase_G,
+        Lmp_PodRight_GunChase_B,
+        Lmp_Marquee_R,
+        Lmp_Marquee_G,
+        Lmp_Marquee_B,
+        Lmp_Speaker,
+        Lmp_Speaker_R,
+        Lmp_Speaker_G,
+        Lmp_Speaker_B,
+        Lmp_RearSoldier,
+        Lmp_MasterChief,
+        Lmp_MonitorStand,
+        Lmp_P1_Holster,
+        Lmp_P2_Holster,
+        Lmp_P3_Holster,
+        Lmp_P4_Holster,
+        Lmp_P1_Holster_R,
+        Lmp_P2_Holster_R,
+        Lmp_P3_Holster_R,
+        Lmp_P4_Holster_R,
+        Lmp_P1_Holster_G,
+        Lmp_P2_Holster_G,
+        Lmp_P3_Holster_G,
+        Lmp_P4_Holster_G,
+        Lmp_P1_Holster_B,
+        Lmp_P2_Holster_B,
+        Lmp_P3_Holster_B,
+        Lmp_P4_Holster_B,
+        Lmp_P1_Side_R,
+        Lmp_P2_Side_R,
+        Lmp_P3_Side_R,
+        Lmp_P4_Side_R,
+        Lmp_P1_Side_G,
+        Lmp_P2_Side_G,
+        Lmp_P3_Side_G,
+        Lmp_P4_Side_G,
+        Lmp_P1_Side_B,
+        Lmp_P2_Side_B,
+        Lmp_P3_Side_B,
+        Lmp_P4_Side_B,
+        Lmp_P1_GunAmmo,
+        Lmp_P2_GunAmmo,
+        Lmp_P3_GunAmmo,
+        Lmp_P4_GunAmmo,
+        Lmp_P1_GunGrenade,
+        Lmp_P2_GunGrenade,
+        Lmp_P3_GunGrenade,
+        Lmp_P4_GunGrenade,      // <-- Halo (end)               
+        Lmp_MainSpeaker,        //\
+        Lmp_GunTower,           //  Time Crisis 4
+        Lmp_VoiceSpeaker,       ///
+
+        Credits = 1000,
+        P1_CtmLmpStart,
+        P2_CtmLmpStart,
+        P3_CtmLmpStart,
+        P4_CtmLmpStart,
+        P1_Ammo,
+        P2_Ammo,
+        P3_Ammo,
+        P4_Ammo,        
+        P1_CtmRecoil,
+        P2_CtmRecoil,
+        P3_CtmRecoil,
+        P4_CtmRecoil,        
+        P1_HealthBar,
+        P2_HealthBar,
+        P3_HealthBar,
+        P4_HealthBar,
+        P1_Life,
+        P2_Life,
+        P3_Life,
+        P4_Life,
+        P1_Damaged,
+        P2_Damaged,
+        P3_Damaged,
+        P4_Damaged,
+        P1_Credits,
+        P2_Credits,
+        P3_Credits,
+        P4_Credits,
+        MameOrientation = 12345,
+        MamePause,
+    }
+}

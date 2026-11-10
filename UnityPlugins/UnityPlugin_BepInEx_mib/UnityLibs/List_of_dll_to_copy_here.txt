@@ -1,0 +1,9 @@
+Copy the following files from the original game :
+
+ Assembly-CSharp-firstpass.dll  
+ Assembly-CSharp.dll  
+ UnityEngine.CoreModule.dll  
+ UnityEngine.InputLegacyModule.dll  
+ UnityEngine.UI.dll  
+ UnityEngine.dll  
+

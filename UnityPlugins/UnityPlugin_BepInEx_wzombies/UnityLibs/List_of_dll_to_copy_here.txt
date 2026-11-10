@@ -1,0 +1,10 @@
+Copy the following files from the original game :
+
+ Assembly-CSharp.dll  
+ LitJson.dll  
+ UnityEngine.CoreModule.dll  
+ UnityEngine.InputModule.dll  
+ UnityEngine.UI.dll  
+ UnityEngine.UIModule.dll  
+ UnityEngine.dll  
+
