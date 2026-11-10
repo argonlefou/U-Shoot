@@ -2,6 +2,7 @@
 <p align="center">
   <img src="https://github.com/argonlefou/U-Shoot/wiki/assets/logo.png" style="width: 500px;">
 </p>
+
 # What it is
 Inheriting [DemulShooter](https://github.com/argonlefou/DemulShooter) code and core functionalities, U-Shoot is a kind of swiss-knife / universal tool for a lot of Lightgun games. Main functionalities are :
  - Raw Input support for games not designed to work with anything else than a simple mouse, or a gun controller
