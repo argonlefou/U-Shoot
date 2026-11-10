@@ -30,3 +30,6 @@ Thanks for all the people making this possible (sorry if I forgot someone in the
  - [RPCS3](https://rpcs3.net/)
 
 For games that can be executed without any emulator (X86/X64 compiled games), U-Shoot will run and patch the games so that they can be displayed, used, an enjoyed in the easiest way possible.
+
+# How to use it ?
+See [Wiki](https://github.com/argonlefou/U-Shoot/wiki)
