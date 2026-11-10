@@ -581,7 +581,7 @@ namespace U_Shoot.Games
                 }
                 if (ReadByte(_DamageStatus_CaveAddress + i) == 1)
                 {
-                    SetOutputValue(OutputId.P2_CtmRecoil + i, 1);
+                    SetOutputValue(OutputId.P1_Damaged + i, 1);
                     WriteByte(_DamageStatus_CaveAddress + i, 0);
                 }
 
